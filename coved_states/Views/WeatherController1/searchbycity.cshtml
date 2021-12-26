@@ -1,0 +1,19 @@
+﻿@model coved_states.Models.searchbycity
+
+@{
+    ViewData["title"] = "search by city";
+}
+
+<div class="container">
+    
+        <form method="post">
+            <div class="container">
+                <h2>Enter the city Name</h2>
+                <div>
+                    <input asp-for="namecity"  class="form-control" placeholder="enter city name" /><br />
+                    <button asp-controller="WeatherController1" asp-action="searchbycity" class="btn btn-primary">Search</button>
+                    <span asp-validation-for="namecity" class="text-danger"></span>
+                </div>
+             </div>
+</form>
+    </div>

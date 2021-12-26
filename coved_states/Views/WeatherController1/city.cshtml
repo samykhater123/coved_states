@@ -1,0 +1,81 @@
+﻿@model coved_states.Models.Citys
+
+@{
+    ViewData["title"] = "city";
+}
+
+
+
+
+<div class="container"style="display:inline">
+    <div class="container" style="display:inline">
+        <div class="form-group col-md-offset-3 col-md-5" style="display:inline">
+            <h3>Forcast for @Model.name</h3>
+
+
+            <div class="row">
+                <div class="card" style="width:150px;height:120px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);padding: 8px 10px;font-size: 22px;margin-right:20px;background-color:lavender">
+
+                    <div class="container">
+                        <label asp-for="name"></label>
+                        <span class="badge alert-primary">@Model.name</span><br />
+                    </div>
+                </div>
+
+
+                <div class="card" style="width:150px;height:120px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);padding: 8px 10px;font-size: 22px;margin-right:20px;background-color:lavender">
+
+                    <div class="container">
+                        <label asp-for="tempreture"></label>
+                        <span class="badge alert-primary">@Model.tempreture°</span><br />
+                    </div>
+                </div>
+
+
+                <div class="card" style="width:150px;height:120px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);padding: 8px 10px;font-size: 22px;margin-right:20px;background-color:lavender">
+
+                    <div class="container">
+                        <label asp-for="humidity"></label>
+                        <span class="badge alert-primary">@Model.humidity</span><br />
+                    </div>
+                </div>
+
+                <div class="card" style="width:150px;height:120px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);padding: 8px 10px;font-size: 22px;margin-right:20px;background-color:lavender">
+
+                    <div class="container">
+                        <label asp-for="preassure"></label>
+                        <span class="badge alert-primary">@Model.preassure</span><br />
+                    </div>
+                </div>
+
+                <div class="card" style="width:150px;height:120px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);padding: 8px 10px;font-size: 22px;margin-right:20px;background-color:lavender">
+
+                    <div class="container">
+                        <label asp-for="wind"></label>
+                        <span class="badge alert-primary">@Model.wind</span><br />
+                    </div>
+                </div>
+
+                <div class="card" style="width:150px;height:120px;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);padding: 8px 10px;font-size: 22px;margin-right:20px;background-color:lavender">
+
+                    <div class="container">
+                        <label asp-for="weather"></label>
+                        <span class="badge alert-primary">@Model.weather</span><br />
+                    </div>
+                </div>
+
+            </div>
+
+            <br />
+
+            <form method="get">
+                <a asp-controller="WeatherController1" asp-action="searchbycity" class="btn btn-danger">Back</a>
+            </form>
+        </div>
+        <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        <div>
+            <h1>Developed by Eng/<a href="/Home/Index">samy khater</a></h1>
+
+        </div>
+    </div>
+</div>
